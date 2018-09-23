@@ -25,7 +25,7 @@
         /*global styles */
         * {
             /* #2 #font #faces */
-            font-family: 'Arial', sans-serif;
+            font-family: 'Roboto', sans-serif;
         }
 
         body {
@@ -38,14 +38,7 @@
             background-color: #3F51B5;
             color: white;
         }
-
-        button {
-            /* #2 #colourful #plusfive */
-            background-color: yellow;
-            color: black;
-            /* #2 #font capital #letters */
-            text-transform: uppercase;
-        }
+        
 
 
         /*styles for channel area*/
@@ -79,6 +72,45 @@
         span {
             width: 80%;
         }
+        #channel-list {
+            padding: 16px 16px 16px 16px;
+            font-size: 16px;
+            border-bottom: 4px #3F51B5;
+            box-sizing: border-box;
+        }
+        .tap-bar {
+            background-color: white;
+            text-transform: uppercase;
+            border: none;
+            font-size: 13px;
+            padding-top: 16px;
+            padding-left: 16px;
+            padding-right: 16px;
+            padding-bottom: 16px;
+            margin: auto;
+            width: 33%;
+
+
+        }
+        .messages {
+         
+            width: 80%;
+            margin-bottom: 8px;
+            font-size: medium;
+            background-color: white;
+            padding: 16px 0px 16px 0px;
+        }
+        
+        .message-button {
+            background-color: #CDDC39;
+            color: black;
+            text-transform: uppercase;
+        }
+        #first-metadata {
+            margin-left: 17.5%;
+            margin-bottom: 8px;
+        }
+            
         a {
             color: black;
         }
@@ -94,7 +126,7 @@
 <h1><img src="https://ip.lfe.mw.tum.de/sections/moocus.png" alt="A Moocus bird icon" style="width: 56px; height: 56px;">chatter|app</h1>
 
 <!-- #1 #channels #topics -->
-<h2>
+<h2 id="channel-list">
 <ul>#Yummy<img src="https://ip.lfe.mw.tum.de/sections/star.png" alt="a star icon"></ul>
 <ul>#SevenContinents<img src="https://ip.lfe.mw.tum.de/sections/star-o.png" alt="a star icon"></ul>
 <ul>#KillerApp<img src="https://ip.lfe.mw.tum.de/sections/star.png" alt="a star image"></ul>
@@ -104,9 +136,9 @@
 
 <!-- #1 #channels #buttons -->
 <div>
-<button style="background-color: white;"> new  <img src="https://ip.lfe.mw.tum.de/sections/lightbulb-o.png" alt="a light bulb icon"></button>
-<button style="background-color: white;">trending<img src="https://ip.lfe.mw.tum.de/sections/fire.png" alt="a fire icon"></button>
-<button style="background-color: white;">favorites<img src="https:/ip.lfe.mw.tum.de/sections/star.png" alt="a star icon"></button>
+<button class="tap-bar" style="border-bottom: 4px blue; color: blue;"> new  <img src="https://ip.lfe.mw.tum.de/sections/lightbulb-o.png" alt="a light bulb icon"></button>
+<button class="tap-bar">trending<img src="https://ip.lfe.mw.tum.de/sections/fire.png" alt="a fire icon"></button>
+<button class="tap-bar">favorites<img src="https:/ip.lfe.mw.tum.de/sections/star.png" alt="a star icon"></button>
 </div>
 
 
@@ -121,7 +153,8 @@
 </h1>
 
 <!-- #1 #chat #metadata contains location, weekday, day, and time -->
-<div style="background-color: #F4F6F6;">
+<div style="background-color: #F4F6F6">
+    <div id="first-metadata">
 <h3>
     <!-- #2 #font #locations need an extra element, we'll use strong for w3w locations -->
     <strong><a href="https://w3w.co/cheeses.yard.applies" target="_blank">cheeses.yard.applies</a></strong>
@@ -130,11 +163,13 @@
     <em>15 min. left</em>
 </h3>
 <!-- #1 #chat #messages depict a short fictional chat-->
-<span><p>What's the place you folks call home?</p></span>
+<span><p class="messages">What's the place you folks call home?</p></span>
 <!-- #1 #chat #button subsequent to each message -->
-<button>+5 min.</button>
+<button class="message-button">+5 min.</button>
+</div>
 
 <!-- #1 #chat #metadata contains location, weekday, day, and time -->
+
 <h3>
     <!-- #2 #font #locations need an extra element, we'll use strong for w3w locations -->
     <strong><a href="https://w3w.co/truck.cotton.zone" target="_blank">truck.cotton.zone</a></strong>
@@ -143,9 +178,9 @@
     <em>4 min. left</em>
 </h3>
 <!-- #1 #chat #messages depict a short fictional chat-->
-<span><p>BRISBANE! Hang loose!</p></span>
+<span><p class="messages">BRISBANE! Hang loose!</p></span>
 <!-- #1 #chat #button subsequent to each message -->
-<button>+5 min.</button>
+<button class="message-button">+5 min.</button>
 
 <!-- #1 #chat #metadata contains location, weekday, day, and time -->
 <h3>
@@ -156,9 +191,9 @@
     <em>12 min. left</em>
 </h3>
 <!-- #1 #chat #messages depict a short fictional chat-->
-<span><p>The big apple.</p></span>
+<span><p class="messages">The big apple.</p></span>
 <!-- #1 #chat #button subsequent to each message -->
-<button>+5 min.</button>
+<button class="message-button">+5 min.</button>
 
 <!-- #1 #chat #metadata contains location, weekday, day, and time -->
 <h3>
@@ -169,9 +204,9 @@
     <em>7 min. left</em>
 </h3>
 <!-- #1 #chat #messages depict a short fictional chat-->
-<span><p>Eu sou um Carocas.</p></span>
+<span><p class="messages">Eu sou um Carocas.</p></span>
 <!-- #1 #chat #button subsequent to each message -->
-<button>+5 min.</button>
+<button class="message-button">+5 min.</button>
 
 <!-- #1 #chat #metadata contains location, weekday, day, and time -->
 <h3>
@@ -182,9 +217,9 @@
     <em>14 min. left</em>
 </h3>
 <!-- #1 #chat #messages depict a short fictional chat-->
-<span><p>Greetings from the western cape!</p></span>
+<span><p class="messages">Greetings from the western cape!</p></span>
 <!-- #1 #chat #button subsequent to each message -->
-<button>+5 min.</button>
+<button class="message-button">+5 min.</button>
 
 <!-- #1 #chat #metadata contains location, weekday, day, and time  -->
 <h3>
@@ -195,9 +230,9 @@
     <em>15 min. left</em>
 </h3>
 <!-- #1 #chat #messages depict a short fictional chat-->
-<span><p>北京</p></span>
+<span><p class="messages">北京</p></span>
 <!-- #1 #chat #button subsequent to each message -->
-<button>+5 min.</button>
+<button class="message-button">+5 min.</button>
 </div>
 
 </body>
